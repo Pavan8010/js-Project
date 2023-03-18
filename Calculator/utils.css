@@ -1,0 +1,39 @@
+.text-center{
+    text-align: center;
+}
+.b-g-black{
+    background-color: black;
+}
+.mx-auto{
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+.flex-col{
+    justify-content: center;
+    flex-direction: column;
+}
+.items-center{
+    align-items: center;
+}
+.button{
+    color-scheme: dark;
+    background-color:blueviolet;
+}
+.operaters{
+    background-color: blue;
+}
+.ans{
+    background-color: green;
+}
+.clear{
+    background-color: rgb(241, 23, 23);
+}
+.zeros{
+    background-color: sandybrown;
+}
+.dot{
+    background-color: cadetblue;
+}
