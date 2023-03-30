@@ -1,14 +1,15 @@
 console.log("welcome to tic tac toe")
-let music = new Audio('Music/music.mp3');
+let music = new Audio('Music/music2.mp3');
 let cturn = new Audio('Music/cturn.wav');
+let x_win = new Audio('Music/x_win.mp3');
+let o_win = new Audio('Music/o_win.wav');
 // let gameover = new Audio('gameover.mp3');
 let turn = "X";
 let gamefinish = false
-
-// music.play();
+music.play();
 
 // Function to change the turn
-const changeTurn = () => {
+function changeTurn() {
     return turn === "X" ? "O" : "X";
 }
 // function to check the winner
@@ -27,8 +28,15 @@ const checkWin = ()=> {
     wins.forEach(e =>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[1]].innerText === boxtext[e[2]].innerText) && (boxtext[e[0]].innerText !== "") ){
             document.querySelector('.info').innerText = boxtext[e[0]].innerText + " won"
-            gamefinish = true
-            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
+            if(document.querySelector('.info').innerText === "X won"){
+                gamefinish = true
+                document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
+                x_win.play();
+            }else{
+                gamefinish = true
+                document.querySelector('.imgbox').getElementsByTagName('img')[1].style.width = "200px";
+                o_win.play();
+            }
             document.querySelector('.line').style.width = "20vw"
             document.querySelector('.line').style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`
         }
