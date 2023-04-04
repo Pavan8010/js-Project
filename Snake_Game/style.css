@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: url("bg.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#board{
+    background: linear-gradient(rgb(161, 212, 161) , rgb(231, 231, 169));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+}
